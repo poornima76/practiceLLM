@@ -23,7 +23,24 @@ def fact(n):
         return 1
     else:
         return(n*fact(n-1))
-    
+# to sort the string given by user 
 def sorting(string):
     return ''.join(sorted(string))
 
+tools = [
+    Tool(
+        name = "Ceaser Cypher",
+        func = lambda string: ceaser_cypher(string),
+        description= "use when user wants to find the ceaser cypher of a word", 
+    ),
+    Tool(
+        name = "Decryption",
+        func = lambda string: decrypt(string),
+        description= "use when user wants to get the original word back", 
+    )
+    Tool(
+        name = "Factorial",
+        func = lambda n: str(fact(int(n)),
+        description= "use when user wants to find the factorial of a number", 
+    )
+]
