@@ -37,10 +37,13 @@ tools = [
         name = "Decryption",
         func = lambda string: decrypt(string),
         description= "use when user wants to get the original word back", 
-    )
+    ),
     Tool(
         name = "Factorial",
-        func = lambda n: str(fact(int(n)),
+        func = lambda n: str(fact(int(n))),
         description= "use when user wants to find the factorial of a number", 
     )
 ]
+
+memory = ConversationBufferMemory(memory_key = "chat_history")
+llm = OpenAI(temperature = 0, verbrose = True)
